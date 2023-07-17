@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Neue Haas Grotesk Text", sans-serif;
+}
+
+body {
+    background: rgba(255, 166, 0, 0.489);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 20px;
+    padding: 50px
+}
+
+.open-modal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    box-shadow: 0px 1px 6px 0px #00000091;
+    border-radius: 8px;
+    padding: 15px;
+    text-decoration: none;
+    background: rgb(99, 139, 227);
+    border: none;
+    width: 270px;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    width: 360px;
+    height: 500px;
+    background: rgb(255, 254, 254);
+    box-shadow: 0px 1px 6px 0px #00000091;
+    border-radius: 8px;
+    padding: 8px;
+    
+}
+
+.modal h3 {
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.input-group input{
+        border: none;
+        border-radius: 0.2rem;
+        padding: 0.8rem;
+        width: 100%;
+        box-shadow: 0px 1px 6px 0px #00000091;
+        margin: 10px;
+
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.adicionar {
+    margin-top: 18px;
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    box-shadow: 0px 1px 6px 0px #00000091;
+    border-radius: 8px;
+    padding: 8px;
+    text-decoration: none;
+    background: rgb(99, 139, 227);
+    border: none;
+    width: 140px;
+}
+
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$TABELA */
+
+.table {
+    background: white;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 0px 1px 6px 0px #00000091;
+}
+
+.table h2 {
+    margin-bottom: 40px;
+}
+
+.table-content {
+    width: 100%;
+    /* border-spacing: 0 0.5rem; */
+    font-weight: normal;
+}
+
+.table-content td {
+    background: rgb(204, 204, 204);
+    border-radius: 2px 2px 2px 2px;
+
+}
+
+
+.table-content th {
+    opacity: 0.6;
+
+}
+

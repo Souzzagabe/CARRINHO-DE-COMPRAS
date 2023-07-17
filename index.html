@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <title>Carrinho</title>
+</head>
+<body>
+    <div class="table">
+        <h2>Carrinho</h2>
+
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+                <tr>
+                    <td>Lacoste</td>
+                    <td>Camisa</td>
+                    <td>2</td>
+                    <td>199,99</td>
+                    <td> <img src="./assets/deletefv.svg" alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+    <div id="myModal" class="modal">
+        <span onclick="closeModal()"  class="close">&times;</span>
+      <div class="modal-content">
+        
+        <h3>Adicione ao Carrinho</h3>
+
+        <div class="input-group">
+            <input type="text" id="marca" name="Marca" placeholder="Marca">
+            <input type="text" id="nome" name="Nome" placeholder="Nome">
+            <input type="number" id="quant" name="amount" placeholder="Quantidade">
+            <input type="number" id="preco" name="amount" placeholder="Preço">
+            <button onclick="carrinho.adicionar()" class="adicionar">Adicionar</button>
+        </div>
+      </div>
+
+    </div>
+
+    <button onclick="openModal()" class="open-modal-button">Adicione ao Carrinho</button>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
