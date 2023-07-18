@@ -93,7 +93,7 @@ class CarrinhoDeCompras {
             let td_nome = tr.insertCell();
             let td_quant = tr.insertCell();
             let td_preco = tr.insertCell();
-            let td_retirar = tr.insertCell()
+            let td_retirar = tr.insertCell();
 
             td_marca.innerText = this.itens[i].produtoMarca;
             td_nome.innerText = this.itens[i].produtoNome;
