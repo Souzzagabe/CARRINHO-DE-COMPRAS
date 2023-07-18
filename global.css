@@ -60,6 +60,11 @@ header h1 {
     background: #00285F;
     border: none;
     width: 150px;
+    transition: 0.6s ease;
+}
+
+.open-modal-button:hover {
+    background: #00285fce;
 }
 
 .close {
@@ -122,6 +127,11 @@ header h1 {
     background: #00285F;
     border: none;
     width: 120px;
+    transition: 0.6s ease;
+}
+
+.adicionar:hover {
+        background: #00285fce;
 }
 
 
@@ -171,6 +181,7 @@ header h1 {
     text-decoration: none;
     color: white;
     font-size: 12px;
+    text-shadow: 1px 1px 1px #00000091;
 }
 
 footer {
