@@ -24,6 +24,7 @@ class CarrinhoDeCompras {
         }
 
         this.listaTabela();
+        this.limpar();
     }
 
     lerDados() {
@@ -106,6 +107,14 @@ class CarrinhoDeCompras {
 
             imgRetirar.setAttribute("onclick", "carrinho.removerItem('" + this.itens[i].produtoNome + "')");
         }
+    }
+
+    limpar() {
+        document.getElementById("marca").value = '';
+        document.getElementById("nome").value = '';
+        document.getElementById("quant").value = '';
+        document.getElementById("preco").value = '';
+
     }
 }
 
