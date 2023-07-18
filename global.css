@@ -6,20 +6,45 @@
 }
 
 body {
-    background: rgba(255, 166, 0, 0.489);
+    background: #F78B00;
+
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+header {
+    background: #00285F;
+    color: white;
+    padding: 20px;
+    font-size: 10px;
+    box-shadow: 0px 1px 6px 0px #00000091;
+}
+
+.content {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     height: 100vh;
     gap: 20px;
-    padding: 50px
+    padding: 50px;
+
+}
+
+.button-car {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .open-modal-button {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     text-decoration: none;
     font-size: 11px;
     color: rgb(255, 255, 255);
@@ -29,9 +54,10 @@ body {
     border-radius: 8px;
     padding: 11px;
     text-decoration: none;
-    background: rgb(99, 139, 227);
+    background: #00285F;
     border: none;
     width: 150px;
+
 }
 
 .close {
@@ -46,7 +72,8 @@ body {
     box-shadow: 0px 1px 6px 0px #00000091;
     border-radius: 8px;
     padding: 8px;
-    
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.9;
 }
 
 .modal h3 {
@@ -62,13 +89,13 @@ body {
     width: 200px;
 }
 
-.input-group input{
-        border: none;
-        border-radius: 0.2rem;
-        padding: 6px;
-        width: 100%;
-        box-shadow: 0px 1px 6px 0px #00000091;
-        margin: 10px;
+.input-group input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 6px;
+    width: 100%;
+    box-shadow: 0px 1px 6px 0px #00000091;
+    margin: 10px;
 
 }
 
@@ -81,7 +108,7 @@ body {
 }
 
 .adicionar {
-    
+
     text-decoration: none;
     font-size: 11px;
     color: rgb(255, 255, 255);
@@ -91,7 +118,7 @@ body {
     border-radius: 8px;
     padding: 8px;
     text-decoration: none;
-    background: rgb(99, 139, 227);
+    background: #00285F;
     border: none;
     width: 120px;
 }
@@ -115,6 +142,8 @@ body {
 .table h2 {
     margin-bottom: 20px;
     font-size: 18px;
+    text-shadow: 0px 1px 6px 0px #000000f6;
+
 }
 
 .table-content {
@@ -126,9 +155,7 @@ body {
 .table-content td {
     background: rgb(204, 204, 204);
     border-radius: 2px 2px 2px 2px;
-
 }
-
 
 .table-content th {
     opacity: 0.6;
@@ -140,3 +167,20 @@ body {
     font-size: 12px
 }
 
+.footer {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+footer {
+    background: #00285F;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 1px 6px 0px #00000091;
+}
+
+.total h4{
+    padding: 8px;
+}
