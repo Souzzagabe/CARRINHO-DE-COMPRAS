@@ -114,7 +114,6 @@ class CarrinhoDeCompras {
         document.getElementById("nome").value = '';
         document.getElementById("quant").value = '';
         document.getElementById("preco").value = '';
-
     }
 }
 
