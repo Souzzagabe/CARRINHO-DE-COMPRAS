@@ -69,10 +69,16 @@ class CarrinhoDeCompras {
 
     removerItem(item) {
         const index = this.itens.indexOf(item);
-        if (index !== -1) {
+        if (index !== 0) {
             const itemRemovido = this.itens.splice(index, 1)[0];
             this.quantidadeTotal -= itemRemovido.quantidade;
             this.valorTotal -= itemRemovido.quantidade * itemRemovido.preco;
+
+
+            let tbody = document.getElementById("tbody");
+            tbody.deleteRow(index);
+
+            console.log("cliquei")
         }
     }
 
@@ -87,11 +93,18 @@ class CarrinhoDeCompras {
             let td_nome = tr.insertCell();
             let td_quant = tr.insertCell();
             let td_preco = tr.insertCell();
+            let td_retirar = tr.insertCell()
 
             td_marca.innerText = this.itens[i].produtoMarca;
             td_nome.innerText = this.itens[i].produtoNome;
             td_quant.innerText = this.itens[i].produtoQuant;
             td_preco.innerText = this.itens[i].produtoPreco;
+
+            let imgRetirar = document.createElement('img');
+            imgRetirar.src = 'assets/retirar2.png';
+            td_retirar.appendChild(imgRetirar);
+
+            imgRetirar.setAttribute("onclick", "carrinho.removerItem('" + this.itens[i].produtoNome + "')");
         }
     }
 }
@@ -108,16 +121,16 @@ class Item {
 
 const carrinho = new CarrinhoDeCompras();
 
-const item1 = new Item("camisa", 2, 25, "lacoste");
-const item2 = new Item("chinelo", 50, 100, "tommy");
+// const item1 = new Item("camisa", 2, 25, "lacoste");
+// const item2 = new Item("chinelo", 50, 100, "tommy");
 
-carrinho.adicionarItem(item1);
-carrinho.adicionarItem(item2);
+// carrinho.adicionarItem(item1);
+// carrinho.adicionarItem(item2);
 
-console.log(carrinho)
+// console.log(carrinho)
 
-carrinho.removerItem(item2)
+// carrinho.removerItem(item2)
 
-//carrinho.removerItem(item1)
+// //carrinho.removerItem(item1)
 
-console.log("carrinhoRemovido", carrinho)
+// console.log("carrinhoRemovido", carrinho)
