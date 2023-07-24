@@ -1,10 +1,10 @@
 function openModal() {
-    var modal = document.querySelector('.modal');
-    modal.style.display = 'block';
+    var modal = document.querySelector('.box-modal');
+    modal.style.display = 'flex';
 }
 
 function closeModal() {
-    var modal = document.querySelector('.modal');
+    var modal = document.querySelector('.box-modal');
     modal.style.display = 'none';
 }
 
@@ -25,18 +25,22 @@ class CarrinhoDeCompras {
 
         this.listaTabela();
         this.limpar();
+        this.exibirValorTotal(); 
+
+        console.log("cliquei")
     }
 
     lerDados() {
         let produto = {};
-
+    
         produto.produtoMarca = document.getElementById("marca").value;
         produto.produtoNome = document.getElementById("nome").value;
         produto.produtoQuant = document.getElementById("quant").value;
         produto.produtoPreco = document.getElementById("preco").value;
-
+    
         return produto;
     }
+    
 
     validaCampos(produto) {
         let msg = '';
@@ -64,20 +68,21 @@ class CarrinhoDeCompras {
 
     adicionarItem(item) {
         this.itens.push(item);
-        this.quantidadeTotal += item.quantidade;
-        this.valorTotal += item.quantidade * item.preco;
+        this.quantidadeTotal += parseInt(item.produtoQuant);
+        this.valorTotal += parseInt(item.produtoQuant) * parseFloat(item.produtoPreco);
     }
+    
 
     removerItem(item) {
         const index = this.itens.indexOf(item);
         if (index !== 0) {
             const itemRemovido = this.itens.splice(index, 1)[0];
             this.quantidadeTotal -= itemRemovido.quantidade;
-            this.valorTotal -= itemRemovido.quantidade * itemRemovido.preco;
-
+            this.valorTotal -= itemRemovido.produtoQuant * itemRemovido.produtoPreco;
 
             let tbody = document.getElementById("tbody");
             tbody.deleteRow(index);
+            this.exibirValorTotal(); 
 
             console.log("cliquei")
         }
@@ -87,7 +92,7 @@ class CarrinhoDeCompras {
         let tbody = document.getElementById("tbody");
         tbody.innerHTML = '';
 
-        for (let i = 1; i < this.itens.length; i++) {
+        for (let i = 0; i < this.itens.length; i++) {
             let tr = tbody.insertRow();
 
             let td_marca = tr.insertCell();
@@ -115,6 +120,12 @@ class CarrinhoDeCompras {
         document.getElementById("quant").value = '';
         document.getElementById("preco").value = '';
     }
+
+    exibirValorTotal() {
+        let valorTotalElement = document.getElementById("valorTotal");
+        valorTotalElement.innerText = `Valor Total: R$ ${this.valorTotal.toFixed(2)}`;
+    }
+
 }
 
 class Item {

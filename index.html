@@ -12,49 +12,55 @@
 <body>
     <header>
         <div class="container">
-            <h1>MeuEcommerce</h1>
+            <div class="header">
+                <h1>MeuEcommerce</h1>
+
+                <img onclick="openModal()" class="open-modal-button" src="./assets/android-chrome-192x192.png" alt="">
+            </div>
         </div>
     </header>
     <div class="container">
         <div class="content">
+            <div class="box-modal">
+                <div class="button-car">
+                    <div class="table">
+                        <span onclick="closeModal()" class="close">&times;</span>
+                        <h2>Carrinho</h2>
+                        <table class="table-content">
+                            <thead>
+                                <tr>
+                                    <th>Marca</th>
+                                    <th>Nome</th>
+                                    <th>Quantidade</th>
+                                    <th>Preço</th>
+                                    <th>Retirar</th>
+                                </tr>
+                            </thead>
 
-            <div class="button-car">
-                <div class="table">
-                    <h2>Carrinho</h2>
-                    <table class="table-content">
-                        <thead>
-                            <tr>
-                                <th>Marca</th>
-                                <th>Nome</th>
-                                <th>Quantidade</th>
-                                <th>Preço</th>
-                                <th>Retirar</th>
-                            </tr>
-                        </thead>
+                            <tbody id="tbody">
+                                <tr>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                        <tbody id="tbody">
-                            <tr>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="total">
-                        <h4>Valor total: R$ 599,00</h4>
+                        <div class="total">
+                            <h4 id="valorTotal"></h4>
+                        </div>
                     </div>
-                </div>
-                <button onclick="openModal()" class="open-modal-button">Adicione ao Carrinho</button>
-            </div>
 
-            <div id="myModal" class="modal">
-                <span onclick="closeModal()" class="close">&times;</span>
-                <div class="modal-content">
-                    <h3>Adicione ao Carrinho</h3>
-                    <div class="input-group">
-                        <input type="text" id="marca" name="Marca" placeholder="Marca">
-                        <input type="text" id="nome" name="Nome" placeholder="Nome">
-                        <input type="number" id="quant" name="amount" placeholder="Quantidade">
-                        <input type="number" id="preco" name="amount" placeholder="Preço">
-                        <button onclick="carrinho.adicionar()" class="adicionar">Adicionar</button>
+                </div>
+
+                <div id="myModal" class="modal">
+                    
+                    <div class="modal-content">
+                        <h3>Adicione ao Carrinho</h3>
+                        <div class="input-group">
+                            <input type="text" id="marca" name="Marca" placeholder="Marca">
+                            <input type="text" id="nome" name="Nome" placeholder="Nome">
+                            <input type="number" id="quant" name="amount" placeholder="Quantidade">
+                            <input type="number" id="preco" name="amount" placeholder="Preço">
+                            <button onclick="carrinho.adicionar()" class="adicionar">Adicionar</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +68,8 @@
     </div>
     <footer>
         <div class="container">
-            <a class="footer" target="_blank" href="https://www.linkedin.com/in/gabriel-souza-0b6601269/">@Souzzagabe</a>
+            <a class="footer" target="_blank"
+                href="https://www.linkedin.com/in/gabriel-souza-0b6601269/">@Souzzagabe</a>
         </div>
 
     </footer>
