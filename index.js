@@ -82,7 +82,7 @@ class CarrinhoDeCompras {
 
             let tbody = document.getElementById("tbody");
             tbody.deleteRow(index);
-            this.exibirValorTotal(); 
+            this.exibirValorTotal();
 
             console.log("cliquei")
         }
