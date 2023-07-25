@@ -1,0 +1,40 @@
+.table {
+    background: white;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 0px 1px 6px 0px #00000091;
+    overflow: auto;
+}
+
+.table h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px #00000091;
+}
+
+.table-content {
+    width: 100%;
+    /* border-spacing: 0 0.5rem; */
+    font-weight: normal;
+}
+
+.table-content td {
+    background: rgb(204, 204, 204);
+    border-radius: 2px 2px 2px 2px;
+}
+
+.table-content th {
+    opacity: 0.6;
+    font-size: 12px;
+
+}
+
+#tbody {
+    font-size: 12px
+}
+

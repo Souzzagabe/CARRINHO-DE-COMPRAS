@@ -8,7 +8,6 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
-
 class CarrinhoDeCompras {
     constructor() {
         this.itens = [];
